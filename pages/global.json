@@ -1,0 +1,9 @@
+{
+  "title": "Cat's Coffee House",
+  "description": "I know what you're thinking; is this a coffee house with cats or a coffee house ran by cats? Your concerns are apelike an unimportant.  Consume our products.",
+  "hours": [
+    {"day": "Mon - Fri", "time": "6am to 10pm"},
+    {"day": "Saturday", "time": "7am to 11pm"},
+    {"day": "Sunday", "time": "7am to 10pm"}
+  ]
+}

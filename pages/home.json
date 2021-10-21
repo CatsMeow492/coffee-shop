@@ -1,0 +1,32 @@
+{
+  "hero": {
+    "header": "Drink Healthy <br> and Natural Coffee",
+    "subtext": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "bg_image": "/images/catcoffee.jpg"
+  },
+  "about": {
+    "header": "Welcome to Cat's Coffee House",
+    "subtext": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "bg_image": "/images/barista-2.jpg",
+    "images": [
+      {"image": "/images/coffee.jpg", "caption": "Coffee"},
+      {"image": "/images/tea.jpg", "caption": "Tea"},
+      {"image": "/images/cupcake.jpg", "caption": "Pastries"}
+    ]
+  },
+  "team": {
+    "subheader": "Team",
+    "header": "Meet the Team!",
+    "img_background": "/images/cafe.png",
+    "members": [
+      {"name": "Felix", "image": "images/business-cat.jpg", "quote": "Moar Business", "position": "CEO"},
+      {"name": "Snowball", "image": "images/chem-cat.png", "quote": "We Can Do Science!"},
+      {"name": "Joe", "image": "images/tech-cat.jpg", "quote": "I think there is a world market for maybe five computers.", "position": "Tech Stuff"}
+    ]
+  },
+  "order": {
+    "subheader": "Order",
+    "order": "Place Your Order",
+    "img_background": "/images/barista-3.jpg"
+  }
+}
