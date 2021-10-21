@@ -46,7 +46,7 @@
 
 								{{#page.about.images}}
 	            	<a href="#" class="thumb-menu pr-md-4 text-center">
-	            		<div class="img" style="background-image: url{{{cdn}}}({{image}});"></div>
+	            		<div class="img" style="background-image: url({{image}});"></div>
 	            		<h4>{{caption}}</h4>
 	            	</a>
 								{{/page.about.images}}
@@ -145,7 +145,7 @@
 
     </section>
 
-    <section class="ftco-section testimony-section" style="background-image: url({{{cdn}}}{{page.team.img_background}});" data-stellar-background-ratio="0.5">
+    <section class="ftco-section testimony-section" style="background-image: url({{page.team.img_background}});" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-2">
           <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
@@ -160,7 +160,7 @@
               {{#page.team.members}}
               <div class="item">
                 <div class="testimony-wrap text-center py-4 pb-5">
-                  <div class="user-img mb-4" style="background-image: url({{{cdn}}}{{image}})">
+                  <div class="user-img mb-4" style="background-image: url({{image}})">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
@@ -183,7 +183,7 @@
 		<section class="ftco-section ftco-no-pt ftco-no-pb">
 			<div class="container">
 				<div class="row d-flex">
-          <div class="col-md-5 ftco-animate img img-2" style="background-image: url({{{cdn}}}{{page.order.img_background}});"></div>
+          <div class="col-md-5 ftco-animate img img-2" style="background-image: url({{page.order.img_background}});"></div>
           <div class="col-md-7 ftco-animate makereservation p-4 p-md-5">
           	<div class="heading-section ftco-animate mb-5">
 	          	<span class="subheading">{{page.order.subheader}}</span>
@@ -206,14 +206,12 @@
                 <div class="col-md-12">
                   <div class="form-group">
                     <label for="">Order</label>
-                    <textarea id="order-description" name="order" type="text" style="background-color:#fffffa !important" class="form-control" rows="8" placeholder="Describe your order here..."></textarea>
+                    <textarea id="order-description" name="order" style="background:#fffffa !important" class="form-control" rows="8" placeholder="Describe your order here..."></textarea>
                   </div>
-                </div>
-                 
                 </div>
                 <div class="col-md-12 mt-3">
                   <div id="btn-order-container" class="form-group">
-                    <input id="btn-order" type="submit" value="Place Your Order" class="btn btn-primary py-3 px-5">
+                    <input id="btn-order" type="submit" value="Place Your Order!" class="btn btn-primary py-3 px-5">
                   </div>
                 </div>
               </div>
@@ -225,12 +223,13 @@
 
     {{>footer}}
     {{>scripts}}
+
     <script>
       (function(){
-        console.log('hello')
+        console.log('HELLO!')
         $('#btn-order').click(function(event){
           if (event)
-          event.preventDefault()
+            event.preventDefault()
 
           var order = {
             name: $('#order-name').val(),
@@ -238,21 +237,24 @@
             order: $('#order-description').val()
           }
 
-          console.log('PLACE ORDER! ' + JSON.stringify(order))
+          console.log('PLACE ORDER: ' + JSON.stringify(order))
           $.ajax({
             url: '/order',
             method: 'post',
             data: order,
-            success: function(resp) {
-              console.log('ORDER RECEIVED: ' + JSON.stringify(resp))
-              $('#btn-order-container').html('<h3>Thanks! We will send you an email when your order is ready</h3>')
+            success: function(resp){
+              console.log('ORDER RECEIVED: '+JSON.stringify(resp))
+              $('#btn-order-container').html('<h3>Thanks! We will send you an email when your order is ready!</h3>')
+              
             },
-            error: function() {
+            error: function(resp){
 
             }
           })
+
         })
-      }())
+
+      })()    
     </script>
   </body>
 </html>
